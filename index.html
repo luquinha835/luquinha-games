@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luquinha Games</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:black;
+    font-family:Arial;
+    color:white;
+    text-align:center;
+}
+
+/* fundo de estrelas */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+    background-size:50px 50px;
+    animation:stars 50s linear infinite;
+    opacity:0.4;
+}
+
+@keyframes stars{
+    from{transform:translateY(0);}
+    to{transform:translateY(-1000px);}
+}
+
+.container{
+    background:rgba(0,0,0,0.7);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(5px);
+}
+
+h1{
+    margin-bottom:30px;
+}
+
+button{
+    padding:15px 30px;
+    margin:10px;
+    font-size:18px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.pc{
+    background:#4CAF50;
+    color:white;
+}
+
+.mobile{
+    background:#2196F3;
+    color:white;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>🎮 Luquinha Games</h1>
+<p>Qual é o seu dispositivo?</p>
+
+<button class="pc" onclick="pc()">💻 PC / Notebook</button>
+<button class="mobile" onclick="mobile()">📱 Celular</button>
+</div>
+
+<script>
+function pc(){
+    window.location.href="https://luquinha835.github.io";
+}
+
+function mobile(){
+    window.location.href="https://luquinha835.github.io/luquinha-games2";
+}
+</script>
+
+</body>
+</html>
